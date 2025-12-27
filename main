@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cohortly – Global Student Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-50 min-h-screen flex flex-col">
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 sticky top-0 z-20 bg-slate-950/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-2xl bg-indigo-500 flex items-center justify-center font-bold text-sm">
+          Co
+        </div>
+        <div>
+          <div class="font-semibold text-lg">Cohortly</div>
+          <div class="text-[10px] text-slate-400 uppercase tracking-wide">
+            Global Student Network
+          </div>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#hero" class="hover:text-white">Home</a>
+        <a href="#how" class="hover:text-white">How it works</a>
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#auth" class="hover:text-white">Join</a>
+      </nav>
+      <button
+        class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-xs font-semibold">
+        Sign in
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1">
+    <!-- HERO -->
+    <section id="hero" class="max-w-6xl mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-5">
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+          Meet classmates.<br />
+          <span class="text-indigo-400">Build projects.</span><br />
+          Get hired.
+        </h1>
+        <p class="text-sm md:text-base text-slate-300">
+          Cohortly is a global network for university students:
+          make friends, find project teammates, support international students,
+          and connect with employers looking for fresh talent.
+        </p>
+        <ul class="text-sm text-slate-300 space-y-1">
+          <li>✔ Verified university accounts only</li>
+          <li>✔ Social, study, project, and startup matching</li>
+          <li>✔ Dedicated support for international students</li>
+          <li>✔ Employer portal to discover student talent</li>
+        </ul>
+        <div class="flex flex-wrap gap-3">
+          <a href="#auth"
+             class="inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold bg-indigo-500 hover:bg-indigo-400 text-white">
+            Join as a student
+          </a>
+          <a href="#auth"
+             class="inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 hover:bg-slate-900">
+            I'm an employer
+          </a>
+        </div>
+      </div>
+
+      <!-- Mock UI card -->
+      <div class="space-y-4">
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-5 shadow-xl space-y-3">
+          <p class="text-xs text-indigo-300 font-semibold uppercase tracking-wide">
+            Example match
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-2xl bg-indigo-500/70 flex items-center justify-center text-sm font-bold">
+              YH
+            </div>
+            <div>
+              <p class="font-semibold text-sm">Yuhan · 2nd Year</p>
+              <p class="text-[11px] text-slate-400">
+                Commerce + Eng · McMaster · International student
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[10px]">
+            <span class="px-2 py-1 rounded-full bg-slate-800">Looking for co-founder</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800">Frontend dev</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800">Marketing</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800">Mandarin · English</span>
+          </div>
+          <p class="text-[11px] text-slate-300 leading-relaxed">
+            “I’m building a platform to help students find teammates and support international
+            students. Looking for someone strong in backend or design.”
+          </p>
+          <div class="flex gap-2">
+            <button class="flex-1 text-xs py-1.5 border border-slate-700 rounded-xl hover:bg-slate-800">
+              Skip
+            </button>
+            <button class="flex-1 text-xs py-1.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-semibold">
+              Connect
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 grid sm:grid-cols-3 gap-3 text-[11px]">
+          <div>
+            <p class="text-slate-400 uppercase tracking-wide mb-1">Today</p>
+            <p class="font-semibold">3 new matches</p>
+          </div>
+          <div>
+            <p class="text-slate-400 uppercase tracking-wide mb-1">Projects</p>
+            <p class="font-semibold">AI Study App, Case Comp, Fintech Hackathon</p>
+          </div>
+          <div>
+            <p class="text-slate-400 uppercase tracking-wide mb-1">Employer views</p>
+            <p class="font-semibold">2 companies viewed your profile</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS: STUDENT / INTERNATIONAL / EMPLOYER -->
+    <section class="bg-slate-900/40 border-y border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 py-8 space-y-6">
+        <div class="flex flex-wrap gap-2 text-xs font-semibold">
+          <button data-tab="student"
+                  class="tab-btn px-3 py-1.5 rounded-full border border-indigo-500 bg-indigo-500 text-white">
+            For Students
+          </button>
+          <button data-tab="intl"
+                  class="tab-btn px-3 py-1.5 rounded-full border border-slate-600 text-slate-200">
+            For International Students
+          </button>
+          <button data-tab="employer"
+                  class="tab-btn px-3 py-1.5 rounded-full border border-slate-600 text-slate-200">
+            For Employers
+          </button>
+        </div>
+
+        <!-- STUDENT TAB -->
+        <div id="tab-student" class="tab-panel grid md:grid-cols-3 gap-6 text-sm">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Make friends faster</h3>
+            <p class="text-slate-300">
+              Match with classmates based on program, interests, and languages.
+              No random adults, just verified students.
+            </p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Find project teammates</h3>
+            <p class="text-slate-300">
+              Post class projects, hackathons, or startup ideas and recruit teammates
+              with the skills you need.
+            </p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Study smarter together</h3>
+            <p class="text-slate-300">
+              Join or create study groups for your courses and exams, online or on campus.
+            </p>
+          </div>
+        </div>
+
+        <!-- INTERNATIONAL TAB -->
+        <div id="tab-intl" class="tab-panel hidden grid md:grid-cols-3 gap-6 text-sm">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Find your home community</h3>
+            <p class="text-slate-300">
+              Connect with students from your home country or who speak your language.
+              Share culture, food spots, and support.
+            </p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Survival tools in a new country</h3>
+            <p class="text-slate-300">
+              Guides for banking, phone plans, housing, transit, SIN/visa basics and more —
+              plus Q&A from students who’ve been there.
+            </p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Roommates & housing</h3>
+            <p class="text-slate-300">
+              Match with potential roommates and find trusted housing posts from verified students.
+            </p>
+          </div>
+        </div>
+
+        <!-- EMPLOYER TAB -->
+        <div id="tab-employer" class="tab-panel hidden grid md:grid-cols-3 gap-6 text-sm">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Discover emerging talent</h3>
+            <p class="text-slate-300">
+              Search students by skills, major, and graduation year.
+              See real projects, hackathons, and portfolios.
+            </p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Post internships & jobs</h3>
+            <p class="text-slate-300">
+              Share roles targeted at students and new grads.
+              Get candidates who are already active and motivated.
+            </p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-semibold mb-1">Run challenges & events</h3>
+            <p class="text-slate-300">
+              Sponsor case competitions, hackathons, or virtual challenges and meet the best students.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="max-w-6xl mx-auto px-4 py-10 md:py-14 space-y-6">
+      <h2 class="text-xl md:text-2xl font-semibold">How Cohortly works</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+          <p class="text-[11px] font-semibold text-indigo-300 uppercase tracking-wide">Step 1</p>
+          <h3 class="font-semibold">Sign up with your university email</h3>
+          <p class="text-slate-300">
+            Verify your identity with a campus email so the community stays safe and student-only.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+          <p class="text-[11px] font-semibold text-indigo-300 uppercase tracking-wide">Step 2</p>
+          <h3 class="font-semibold">Tell us what you’re here for</h3>
+          <p class="text-slate-300">
+            Friends, study buddies, projects, startups, jobs, or all of the above — customize your goals.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+          <p class="text-[11px] font-semibold text-indigo-300 uppercase tracking-wide">Step 3</p>
+          <h3 class="font-semibold">Match, chat, build, get hired</h3>
+          <p class="text-slate-300">
+            Meet people, join teams, start something new, and get discovered by employers watching the network.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE GRID -->
+    <section id="features" class="max-w-6xl mx-auto px-4 pb-10 md:pb-14 space-y-6">
+      <h2 class="text-xl md:text-2xl font-semibold">Everything students need in one place</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+          <h3 class="font-semibold mb-1">Smart matching</h3>
+          <p class="text-slate-300">
+            Match by program, skills, interests, languages, and goals (social / study / projects / jobs).
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+          <h3 class="font-semibold mb-1">Project board</h3>
+          <p class="text-slate-300">
+            Browse or post projects and startups. Recruit the designer, coder, or marketer you need.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+          <h3 class="font-semibold mb-1">International hub</h3>
+          <p class="text-slate-300">
+            Dedicated tools and communities for international students to settle in and thrive.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+          <h3 class="font-semibold mb-1">Employer portal</h3>
+          <p class="text-slate-300">
+            Companies can search for talent, post internships, and track student projects and portfolios.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+          <h3 class="font-semibold mb-1">Groups & events</h3>
+          <p class="text-slate-300">
+            Join communities by course, interest, or identity. Discover hackathons, meetups, and case comps.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+          <h3 class="font-semibold mb-1">Safety & verification</h3>
+          <p class="text-slate-300">
+            Email verification, report tools, and clear community guidelines to keep the network healthy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTH / SIGNUP MOCK -->
+    <section id="auth" class="bg-slate-900/40 border-t border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-3">
+          <h2 class="text-xl md:text-2xl font-semibold">Get early access</h2>
+          <p class="text-sm text-slate-300">
+            We’re inviting our first wave of students, international students, and employers.
+            Leave your details and we’ll reach out when Cohortly launches at your campus.
+          </p>
+          <ul class="text-sm text-slate-300 list-disc list-inside">
+            <li>Built by students, for students</li>
+            <li>Free during the early access period</li>
+            <li>Priority invites for ambassadors and beta testers</li>
+          </ul>
+        </div>
+
+        <form class="space-y-3 bg-slate-950/70 border border-slate-800 rounded-2xl p-4 text-sm">
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">I am a</label>
+              <select class="w-full px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <option>Student</option>
+                <option>International student</option>
+                <option>Employer / recruiter</option>
+                <option>University staff</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">University</label>
+              <input type="text" placeholder="e.g. McMaster University"
+                     class="w-full px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">Name</label>
+              <input type="text" placeholder="Your name"
+                     class="w-full px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">Email</label>
+              <input type="email" placeholder="your@university.edu"
+                     class="w-full px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs text-slate-400 mb-1">What are you looking for?</label>
+            <textarea rows="3"
+                      placeholder="Friends, study group, project teammates, co-founder, internship…"
+                      class="w-full px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="w-full mt-1 px-4 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 font-semibold text-sm">
+            Join the waitlist
+          </button>
+
+          <p class="text-[11px] text-slate-400">
+            By submitting, you agree to be contacted about Cohortly’s beta launch. No spam, ever.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+      <span>© 2025 Cohortly · Built by students, for students</span>
+      <span>Friends · Projects · International Support · Employers</span>
+    </div>
+  </footer>
+
+  <!-- SIMPLE TAB SWITCH SCRIPT -->
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const panels = {
+      student: document.getElementById('tab-student'),
+      intl: document.getElementById('tab-intl'),
+      employer: document.getElementById('tab-employer')
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab');
+
+        // update buttons
+        buttons.forEach(b => {
+          b.classList.remove('bg-indigo-500', 'border-indigo-500', 'text-white');
+          b.classList.add('border-slate-600', 'text-slate-200');
+        });
+        btn.classList.add('bg-indigo-500', 'border-indigo-500', 'text-white');
+        btn.classList.remove('border-slate-600', 'text-slate-200');
+
+        // update panels
+        Object.keys(panels).forEach(key => {
+          if (key === target) {
+            panels[key].classList.remove('hidden');
+          } else {
+            panels[key].classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
